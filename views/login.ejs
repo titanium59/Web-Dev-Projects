@@ -1,0 +1,57 @@
+<%- include('partials/boilerplate') %> <%- include('partials/navbar') %>
+    <style>
+      body {
+        color: #fff;
+        background: #3598dc;
+        font-family: "Roboto", sans-serif;
+      }
+    
+      .form {
+        margin: 30px auto;
+        width: 400px;
+      }
+      .form form{
+        color: #999;
+        margin-bottom: 15px;
+        border-radius: 3px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+        background: #fff;
+      }
+      .signup-signin-text a{
+        color: #fff;
+      }
+      form h2 {
+        padding-top: 10px;
+        color: #333;
+      }
+    
+      .form-elements {
+        margin-bottom: 25px;
+      }
+    </style>
+<div class="container form">
+  <form action="/login" method="post">
+    <div>
+      <div class="row">
+        <h2>Login</h2>
+      </div>
+      <p>Please enter your details</p>
+      <div>
+        <input type="email" name="email" id="email" class="form-control form-elements" placeholder="Email" />
+      </div>
+      <div>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control form-elements"
+          placeholder="Password"
+        />
+      </div>
+      <button type="button submit" class="btn btn-primary ">Submit</button>
+    </div>
+  </form>
+  <div class="signup-signin-text">Not a member? - <a href="/register">Sign Up!</a></div>
+</div>
+<%- include('partials/footer') %>
